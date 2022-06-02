@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./style.css" />
+    <title>POP Quizzz</title>
+</head>
+
+<body>
+    <!-- display corners -->
+<header> 
+    <section id = "score_keep" style="display: none">
+     <input type="button" value="View High Scores" onclick="view_high_scores()"></br>
+     Score: <var id="score"></var>
+    </section>
+
+    <section id="countdownTimer" style="display: none">
+    Time Remaining: <span id="timer"></span>
+    </section>
+</header>
+<!-- info and start button -->
+<container>
+    <div id="homeContainer" class="none">
+        <h1>Pop Quiz Time!</h1>
+        <p>Try answering the following code-related questions within 75 seconds!</p> 
+        <p> For each incorrect answer, 5 seconds will be deducted from the timer...</p>
+        <p><strong>Ready, Set</strong></p>
+        <br>
+        <button id="startBtn">Start Quiz</button>
+    </div>
+    </container>
+
+<!-- quiz -->
+    <div id="quizContainer" style="display:none">
+    <h2 id="questionHeading"></h2>
+<!-- answers -->
+<ul>
+    <div id="choices">
+        <button id="answerChoiceA"></button>
+    </div>
+    <div id="choices">
+        <button id="answerChoiceB"></button>
+    </div>
+    <div id="choices">
+        <button id="answerChoiceC"></button>
+    </div>
+    <div id="choices">
+        <button id="answerChoiceD"></button>
+    </div>
+</ul>
+</div>
+  
+</body>
+
+<section id="AnswerResponse">
+</section>
+<div id="game_over" style="display: none">
+<h2>Game Over</h2>
+Your score was: <var id="end_score"></var>
+</br>
+Initials: <input type="text"  value="initials" id="initials">
+    </br>
+    <input type="button" value="submit" id="submit_intials" onclick="submit_score()">
+</div>
+
+<div id="high_scores_page" style="display: none" >
+    <h2> High Scores </h2>
+    <div id="high_scores"></div>
+        <input type="button" value="Go Back" id="go_back" onclick="go_home()">
+        <input type="button" id="Clear Highscores" value ="clear" onclick="clear_hs()">
+    </div>
+
+    <script src="script.js"></script>
+
+</html> 
